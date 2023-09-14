@@ -24,6 +24,7 @@ for i in location:
     get_template = '/{}'
     url = host + get_template.format(i)
     response = requests.get(url, params=paramInURL)
+    response.raise_for_status()
     
     if response.ok:
         result = response.text
