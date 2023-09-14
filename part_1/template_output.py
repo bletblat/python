@@ -14,9 +14,9 @@ parameters = {'1': "0",
               '6': "Q", 
               '7': "T"
               }
-allParam = {"3", "4", "5", "7"}
+selectParam = {"3", "4", "5", "7"}
 paramInURL = '?'
-for i in allParam:
+for i in selectParam:
     paramInURL += parameters.setdefault(i, '')
 for i in location:
     get_template = '/{}{}&lang={}'
